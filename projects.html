@@ -3,9 +3,18 @@
 	<head>
 		<title>Botahamec's Projects</title>
 		<meta charset="utf-8" />
+		<script src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous">
+			</script>
+		<script>
+			$(function () {
+				$("#header").load("header.html");
+			});
+		</script>
 	</head>
 	<body>
-		<header><h1>Botahamec</h1></header>
+		<div id="header"></div>
 		<main>
 			<section><h2>Projects</h2></section>
 			<section>
@@ -14,4 +23,5 @@
 				such as intialization and pushing, much easier to execute with
 				simple commands</p>
 			</section>
+		</main>
 </html>
