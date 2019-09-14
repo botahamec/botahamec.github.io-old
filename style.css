@@ -1,0 +1,51 @@
+body {
+	background-color: #040208;
+	color: #f8fdfb;
+}
+
+header {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 3%;
+	background-color: #4f038580;
+}
+
+nav {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 1%;
+	padding-right: 1%;
+	background-color: #4f038580;
+}
+
+button {
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #8e214048;
+	border: none;
+	color: #ffd3ec;
+}
+
+main {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 3%;
+	padding-right: 3%;
+	background-color: #4f038580;
+}
