@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Roboto&display=swap');
+
 body {
 	background-color: #040208;
 	color: #f8fdfb;
+	font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -11,7 +14,13 @@ header {
 	padding-top: 3px;
 	padding-bottom: 3px;
 	padding-left: 3%;
-	background-color: #4f038580;
+	background-color: #2f0345;
+	font-weight: 900;	
+}
+
+a {
+	color: #89fa82;
+	text-decoration: none;
 }
 
 nav {
@@ -23,7 +32,7 @@ nav {
 	padding-bottom: 6px;
 	padding-left: 1%;
 	padding-right: 1%;
-	background-color: #4f038580;
+	background-color: #2f0345;
 }
 
 button {
@@ -33,9 +42,13 @@ button {
 	padding-right: 2%;
 	padding-top: 4px;
 	padding-bottom: 4px;
-	background-color: #8e214048;
+	background-color: #8e2140;
 	border: none;
 	color: #ffd3ec;
+}
+
+button:hover {
+	background-color: #913c54;
 }
 
 main {
@@ -47,5 +60,20 @@ main {
 	padding-bottom: 3px;
 	padding-left: 3%;
 	padding-right: 3%;
-	background-color: #4f038580;
+	background-color: #2f0345;
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat', sans-serif;
+	color: #89fa82;
+}
+
+section {
+	background-color: #34125c;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
