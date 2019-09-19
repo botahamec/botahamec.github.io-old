@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:400,700,800,900|Roboto&display=swap');
 
 body {
 	background-color: #040208;
@@ -15,7 +15,6 @@ header {
 	padding-bottom: 3px;
 	padding-left: 3%;
 	background-color: #2f0345;
-	font-weight: 900;	
 }
 
 a {
@@ -33,6 +32,11 @@ nav {
 	padding-left: 1%;
 	padding-right: 1%;
 	background-color: #2f0345;
+}
+
+section nav {
+	margin: 0;
+	background-color: #34125c;
 }
 
 button {
@@ -68,6 +72,18 @@ h1, h2, h3 {
 	color: #89fa82;
 }
 
+h1 {
+	font-weight: 900;
+}
+
+h2 {
+	font-weight: 800;
+}
+
+h3 {
+	font-weight: 700;
+}
+
 section {
 	background-color: #34125c;
 	padding-left: 3%;
@@ -76,4 +92,21 @@ section {
 	padding-bottom: 3px;
 	margin-top: 1%;
 	margin-bottom: 1%;
+}
+
+a section:hover {
+	background-color: #41256c;
+}
+
+a section p {
+	color: #f8fdfb;
+}
+
+.code {
+	font-family: 'Fira Mono', monospace;
+	background-color: #2f0345;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }

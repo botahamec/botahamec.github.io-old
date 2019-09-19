@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Elp</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<header id="header"></header>
+		<nav id = "nav"></nav>
+		<main>
+			<section><h2>Elp</h2></section>
+			<section><nav>
+				<a href="https://www.github.com/Botahamec/elp">
+					<button>GitHub</button>
+				</a>
+				<a href="https://github.com/Botahamec/elp/archive/master.zip">
+					<button>Download Source</button>
+				</a>
+			</nav></section>
+			<section><p>Elp is a git helper to make some repetitive tasks much
+			easier to do. Elp only has three commands, so most of what you
+			to do can be done with little effort whatsoever.</p></section>
+			<section>
+				<h3>Usage</h3>
+				<p>Elp has a grand total of three commands, all of which
+				require that you have a blank repository to start</p>
+				<p class="code">elp start -u</p>
+				<p>This command creates a local repository and pushes it to 
+				the remote repository linked. For example: 
+				https://www.github.com/Botahamec/elp.git</p>
+				<p class="code">elp push [TITLE] -m [MESSAGE]</p>
+				<p>This command adds all the files in the current folder to the
+				local repository and makes a commit with the given title and
+				optional message. It then pushes the commit to the remote
+				wrepository</p>
+				<p class="code">elp pull</p>
+				<p>Pulls from the remote repository. Simple enough.</p>
+			</section>
+			<section>
+				<h3>Building</h3>
+				<p>In order to build this, you'll need to have Cargo (the Rust compiler) and Git pre-installed.</p>
+				<ol>
+					<li>Clone the repository (git clone https://github.com/Botahamec/elp.git)</li>
+					<li>Run the installer script. On Unix systems, it's make_linux.sh and on Windows it's make_win.cmd</li>
+					<li>Verify that it installed correctly by typing "elp -V" in a terminal</li>
+				</ol>
+			</section>
+		</main>
+		<script src="load_header.js"></script>
+	</body>
+</html>
