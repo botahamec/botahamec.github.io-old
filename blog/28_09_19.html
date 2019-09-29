@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Botahamec's Projects</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<header id="header"></header>
+		<nav id="nav"></nav>
+		<main>
+			<section>
+				<h2>Elp - A Helper for Git</h2>
+			</section>
+			<section><p>
+                Elp is a command-line tool I made out of frustration. I was
+                frustrated of typing the same commands over and over again to
+                tasks which should, in theory, be pretty simple. But do you
+                what the process is for putting a local repository into an
+                empty remote repository? It's four commands that I have to
+                look for online every single time. And hub is no help (we'll
+                talk about that later). So what if there was a tool that could
+                do this for us? What if, indeed.
+            </p></section>
+            <section><h3>What Is Elp? (What does it do?)</h3></section>
+            <img src="28_09_19_1.png" alt="Elp's help screen" style="float: center">
+            <section><p>
+                Elp has precisely three commands. Not including "elp help". The
+                first comes back to the problem I illustrated before. Putting
+                your local folder into a remote repository. Without elp, it
+                takes four commands to do. With Elp, you can simply use the
+                start command.
+            </p>
+            <p class="code">
+                # without elp<br>
+                git remote add origin https://www.github.com/Botahamec/elp.git<br>
+                git add .<br>
+                git commit -m "First commit"<br>
+                git push origin master<br>
+                <br>
+                # with elp<br>
+                elp start -u https://www.github.com/Botahamec/elp.git<br>
+            </p>
+            </section>
+            <section><p>
+                I know what you're thinking: "Bota, that's impressive and all,
+                but this isn't really something I need to do everyday. I'm
+                willing to deal with this slight hiccup." And, yeah, that's not
+                the best use of my tool, but you know what else is frustrating?
+                Commits. I don't know why this is so hard. But you have add,
+                commit and then push every time you want to make a change. At
+                least, without elp you do. But Elp makes thist process super
+                simple with the push command.
+            </p>
+            <p class="code">
+                # without elp<br>
+                git add .<br>
+                git commit -a -m "Fixed the bug"<br>
+                git push origin master<br>
+                <br>
+                # with elp<br>
+                elp push "Fixed the bug"<br>
+            </p>
+            </section>
+            <section><p>
+                You probably think this is kinda cool right now. In fact, I bet
+                this is what you're thinking right now: "Gee Bota, that sounds
+                epic. What could elp push possibly do?"
+            </p>
+            <p>...</p>
+            <p>
+                Okay, you caught me. That command isn't of very much use. It's
+                just an alias for "git pull origin master". That is all.
+            </p>
+            </section>
+            <section><h3>Why is Elp? (Why does it exist?)</h3></section>
+            <section><p>
+                Another question you may have is, "Isn't this just hub?" At
+                this point you should be able to see an obvious distinction.
+                Hub converts GitHub repository names into urls, and Elp makes
+                long and common git tasks easier. Other than the elp pull
+                command, hub and elp achieve two completely different goals.
+            </p>
+            <p>
+                Okay, so why doesn't Elp also do the things Hub does? Because I
+                didn't think of it. That's the only reason why. I may add this
+                functionality in an Elp 1.1
+            </p>
+            <p>
+                Another con with Elp is that it doesn't display error messages.
+                I know that sounds like it should be obvious, but clearly I
+                wasn't smart enough to do that. So that's another thing which
+                needs to be fixed. Sorry about that. If you accidentally fail
+                the authentication, just type "git push origin master" and
+                everything will be fine.
+            </p>
+            <p>
+                Also, if you tried to install Elp, you'd notice that the
+                process of installing Elp is not much easier than using git.
+                It requires you to have Cargo (the Rust compiler) pre-installed
+                and makes you create a release build yourself. So that is also
+                something I will have to fix in the future.
+            </p></section>
+            <section><h3>How is Elp? (How was it made?)</h3></section>
+            <img src="28_09_19_2.png" alt="Elp's source code" style="float: center">
+            <section>
+                <p>Aha! I'm glad you asked.</p>
+                <p>
+                    Elp was made using the Rust programming language (which is
+                    why you need Cargo to install it). I like Rust because it's
+                    relatively simple and it has performance on par with C. I
+                    don't like using libraries for simple tasks, but I decided
+                    that since I had no idea how to create a command-line-tool
+                    without one, I used the clap crate (Rust calls libraries
+                    crates because it doesn't liek being normal). Clap is easy,
+                    kinda. Some learning is required. Actually the reason Elp
+                    is on 1.0.4 right now is because of all the undiscovered
+                    bugs I had because I wasn't using Clap correctly.
+                </p>
+                <p>
+                    The actual commands aren't really that complicated. It just
+                    runs terminal commands. I thought about using a git library
+                    but I don't think that'd be any more efficient and it's
+                    just another thing that would have to be compiled. So the
+                    only real dependency aside from the compiler is git. It
+                    seems reasonable to assume that everybody has git.
+                </p>
+            </section>
+            <section><h3>Conclusion</h3></section>
+            <section>
+                <p>
+                    I definitely can improve on Elp. The error messages and
+                    repository name support would definitely be a good start.
+                    I also need to make a less stupid installation process.
+                    Other than that, I use elp pretty much every day, and I
+                    think it is a game-changer. Everything is much simpler.
+                </p>
+                <p>
+                    The repository is at
+                    <a href="https://www.github.com/Botahamec/elp">
+                    https://www.github.com/Botahamec/elp</a>. If you use any
+                    amount of Github I suggest you give it a try. I use it
+                    pretty much every day at this point.
+                </p>
+                <p>
+                    If you have any suggestions you can always contact me at
+                    <a href="mailto:botahamec@outlook.com">
+                        botahamec@outlook.com</a>.
+                </p>
+            </section>
+		</main>
+		<script src="load_header.js"></script>
+	</body>
+</html>
