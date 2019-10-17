@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>What Happened With Webster?</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="https://botahamec.github.io/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<header id="header"></header>
+		<nav id="nav"></nav>
+		<main>
+			<section><h2>What Happened With Webster?</h2></section>
+			<section>
+				<p>
+					If you are a follower of my GitHub, you may have noticed an
+					interesting project called webster-py, which is described
+					as an library to assist in creating AI's with object
+					permanence. I'll explain more of what this means later, but
+					if you look at the code, you'll notice a dissappointing
+					docstring summarizing whats going on.
+				</p>
+				<p class="code">
+					Webster is a framework which will in the future be used for AI<br />
+					Currently is not very useful other than being used to store known information<br />
+					The definitions are currently the same as the actual objects, which isn't good<br />
+					However, I will call this 0.1, but it does most of what I expect 1.0 to do<br />
+					The problem is that the rest of what I want it to do in unpractical<br />
+					It's supposed to used an advanced version of dynamic typing<br />
+					Changing definitions should be able to change the value of objects in memory<br />
+					But this doesn't make much sense to implement<br />
+					Imagine I learned that emeralds are green but I thought rubies were emeralds<br />
+					I wouldn't then conclude that rubies are green<br />
+					I'd just say that rubies aren't emeralds<br />
+					Anyway, here's a list of features I'll add in the future to make it better<br />
+					-------------------------------------------------------------------------------<br />
+					Definitions and Objects need to be separate classes<br />
+					There needs to be a special DictionaryProperty class<br />
+					The DictionaryProperty class will be much more robust<br />
+					It will contain a binary operator, which an object will need to fulfill<br />
+					Dictionaries should also have a list of digital "makefiles"<br />
+					The makefiles should help the objects figure out their own properties<br />
+					Definitions also should have a list of adjectives<br />
+					Adjectives are boolean functions which are based on the object's properties<br />
+					This requires a digital "programming language"<br />
+					That's a completely different project though so I won't implement that soon<br />
+					I'd also like somehow a list of the definition's abilities<br />
+					These are abilities that an object of the definition can theoretically perform<br />
+					This however is currently not a reasonable expectation<br />
+					-------------------------------------------------------------------------------<br />
+					If you have questions, suggestions, or ways to improve contact me:<br />
+					My email is botahamec@outlook.com<br />
+				</p>
+				<p>
+					For the vast majority of you who don't know what's going
+					on, let me explain.
+				</p>
+			</section>
+			<section><h3>What's Webster Supposed To Be?</h3></section>
+			<section>
+				<p>
+					Webster is supposed to be an AI, in a sense, which
+					keeps track of objects. It's split into two parts, a
+					dictionary, and a memeory. The ditionary contains
+					definitions of all possible objects, and the memory
+					contains descriptions of all the objects which it knows to
+					exist.
+				</p>
+				<p>
+					"But Bota, this just sounds like a normal database."
+					Well, here's the catch, based on what it knows already, it
+					make make inferences about objects in the world. For
+					example, since this thing is round and red, there's a good
+					chance it's an apple, and because it's an apple, it
+					probably tastes sweet.
+				</p>
+			</section>
+			<section><h3>Ok, So What's Wrong With That?</h3></section>
+			<section>
+				<p>
+					Here's the thing: I was hoping I could make Webster simple.
+					Boy, was that a mistake. Because of its simplicity, it was
+					simply impractical to do any of this advanced inferencing.
+					One line of logic I was planning on using was, for example,
+					"This thing is a ruby. I thought rubies were green. It
+					turns out they are red. This thing is red." There's an
+					obvious problem with that. It would be more reasonable in
+					this context to assume that the object is not a ruby. The
+					problem, in the end, was that the objects didn't contain
+					enough information.
+				</p>
+				<p>
+					Another problem is that the definitions are too simplistic.
+					For example. The background of this page is purple (At
+					least, it was when I wrote but it might have changed). So
+					let's define the color purple. Purple is a color with a hex
+					value of #8800ff. Here's the problem: the hex value for the
+					page is not #8800ff (It's actually #2f0345). But I think we
+					can still agree that it's purple. While we agree with this
+					broad definition of purple, Webster has one idea of what
+					purple is and it's not willing to accept any alternatives.
+				</p>
+				<p>
+					One final problem: scale. I want Webster to eventually have
+					a dictionary comparable to the produced by the
+					collaboration of Mariam and Webster. Meaning it should
+					contain just about every word in the English language.
+					I do not plan on rerwriting the entire dictionary into
+					Webster, and neither are you. So now we have a new problem,
+					which is getting it to learn.
+				</p>
+			</section>
+			<section><h3>Oh Noes! What Do We Do?</h3></section>
+			<section>
+				<p>
+					As you can tell by my master's thesis of a docstring above,
+					I already have some solutions. I'll explain the solution I
+					gave in the docstring first. More complicated Definition
+					and Object classes. I won't get into too many specifics,
+					but the main idea is that instead of defining a value for
+					each property of a definition, I would define rules. So
+					eventually it would boil down to a boolean expression which
+					would say, definitively, if the object is of the given
+					definition.
+				</p>
+				<p>
+					Another thing which needs to be done is for the Object
+					class to have a "definition" property. This way, there can
+					be some ambiguity to what the object actually is, but it
+					can be definitive if we know for sure that it has the given
+					definition. I don't have a great way of explaining it, but
+					trust me, my ruby example from before works under this
+					system.
+				</p>
+				<p>
+					The last problem I illustrated is less solvable, but I'll
+					figure that part out later. I'm sure it's doable, but I
+					think the solution is outside the scope of this article.
+				</p>
+			</section>
+			<section><h3>But Wait! I Have More Planned</h3></section>
+			<section>
+				<p>
+					So far I've been focusing exclusively on nouns, but I also
+					want to implement other types of words (there's a word that
+					people who know stuff about language would use here, but as
+					you can see I don't know anything about language), such as
+					adjectives and verbs. Adjectives would just have a boolean
+					value representing whether or not the given adjective
+					describes it. Verbs are more complicated. I'll figure that
+					out later.
+				</p>
+				<p>
+					I also want to have a sort of "digital makefile", which
+					would allow an object to determine some of its properties
+					based on its other properties. For example, based on the
+					length of each side of a triangle, I can easily figure out
+					what its area is, possibly using the laws of sines and
+					cosines.
+				</p>
+				<p>
+					And if it could have a shell, that'd be great. Just type
+					values and definitions and other things into the shell and
+					it learns.
+				</p>
+			</section>
+			<section><h3>Here Comes Captain Miscellaneous</h3></section>
+			<section>
+				<h4>"Hey Bota, how's your website design going?"</h4>
+				<p>
+					Hey, I've been busy. There's more to life than web design
+					you know (Web Designers may sit down). So I will do that
+					eventually, but I want to actually have content on the site
+					as well, and I can't have that without working on other
+					projects.
+				</p>
+				<h4>"So what else have you been working on?"</h4>
+				<p>
+					Just this weekend, Elp made v1.1. I added support for
+					branches, pushing without committing, and verbose and quiet
+					options.
+				</p>
+				<h4>"Isn't that content you could've added to the site?"</h4>
+				<p>
+					Fair point. Some time I need to go through and update
+					documentation for all my projects. I almost decided to do
+					that this weekend, but then I realized that I didn't have
+					enough projects yet for that to be an issue. So once I've
+					finsihed some of my other priorities, I will do that.
+				</p>
+				<h4>"What are you other priorities?"</h4>
+				<p>
+					Well, Webster for one. My goal is to implement the changes
+					I've discussed here by the end of the month. At that point,
+					I'll be ready to consider this project to be at v1.0. I
+					also have a few Discord Bots that I've made that I want to
+					get up and running. I'll discuss those at a later time. The
+					bots are gonna be running on a Raspberry Pi, so I need a
+					lightweight operating system to run them on that isn't
+					Raspbian. I plan to make this myself, and I'm super excited
+					for it. I'll make sure to tell you have that goes.
+				</p>
+				<h4>"Hey, did you know YouTube was a thing?"</h4>
+				<p>
+					You're probably referring to my lack of videos and, yes, I
+					plan to upload soon, I've just been busy. I do have stuff
+					planned for this week so you can expect a few videos,
+					including one where I finally teach you the pronounciation
+					of my username. You're welcome.
+				</p>
+				<h4>"So I noticed there's been a bit of a gap in your GitHub contributions..."</h4>
+				<p>
+					I have a life, you know. As great as projects are it's not
+					gonna help much if I fail my first Computer Science class.
+					Give me a break, okay?
+				</p>
+				<h4>"You have a StackOverflow!"</h4>
+				<p>
+					Yes I do, and I will try to be regularly active on it.
+				</p>
+				<h4>"You have 11 Reputation."</h4>
+				<p>
+					You need to calm down there.
+				</p>
+				<h4>"Okay, how do you wanna end this post?"</h4>
+				<p>As soon as possible.</p>
+			</section>
+		</main>
+		<script src="https://botahamec.github.io/load_header.js"></script>
+	</body>
+</html>
