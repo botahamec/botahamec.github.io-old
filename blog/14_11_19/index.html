@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Webster 0.2 - Still Problematic</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="https://botahamec.github.io/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<nav id="nav"></nav>
+	<main>
+		<section>
+			<h2>Webster 0.2 - Still Problematic</h2>
+		</section>
+		<section>
+			<p>
+				I've already talked about the copious problems with my Webster
+				prototype, so I made a second version, which is better but
+				still not complete. I just wanna quickly go through all the
+				current problems in the library
+			</p>
+			<p>
+				Webster now has a Rule type which can specify a rule to be
+				applied when comparing an attribute to a property. The problem
+				is that it's still not Turing Complete, because you can't do
+				something like check if the number is two times greater than
+				another number. The clear way to fix this is to create a
+				Modifier type to modify the value of what you're looking for.
+			</p>
+			<p>
+				You cannot compare two attributes. For example, you don't know
+				if the height of a rectangle is equal to its width. The way to
+				solve this would be to add a Value type which can obtain
+				attributes from an object, or create new values. This would
+				replace the current system of just using the name of the
+				property as the attribute that needs to be pulled.
+			</p>
+			<p>
+				The inferencing system still doesn't work. The problem is that
+				the attributes of an object are no longer certain. There are
+				a couple of possible solutions. One is to keep a probability
+				as to whether or not the value is correct. This will definitely
+				be done in the future, but for the time being, it's too
+				complicated. So how about we just don't assume the attributes
+				unless the RuleType is equality?
+			</p>
+			<p>
+				Those are just the problems that I found. Hopefully I'll get
+				them fixed in the upcoming weeks. I haven't been working on
+				anything that I can post here. There is something that I've
+				worked on but it will take me several weeks to finish so don't
+				expect to see it in like the next month or something.
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>
