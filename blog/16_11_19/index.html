@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A Result-Oriented Language (Concept)</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="https://botahamec.github.io/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<nav id="nav"></nav>
+	<main>
+		<section>
+			<h2>A Result-Oriented Language (Concept)</h2>
+		</section>
+		<section>
+			<p>
+				Hear me out here. A functional language, where you do not
+				actually call functions. Instead, you call a result. Every
+				function has a result attached to it. The result describes what
+				exactly the function does. The compiler finds the most
+				efficient way possible to achieve that result.
+			</p>
+			<p>
+				It would be a lazy language, like other functional languages,
+				where the result isn't calculated until it is needed. It's not
+				necessarily that were assigning functions to variables, but
+				we just ignore everything the user wants to do unless it is
+				actually necessary. For example, if a function calculates the
+				current day, but we don't actually use it, then the compiler
+				will ignore the programmer's desire to calculate it.
+			</p>
+			<p>
+				It will also ignore unnecessary data. For example, if a struct
+				has information about gender, but we never use a character's
+				gender, then the compiler will make its own data structure with
+				no information on gender.
+			</p>
+			<p>
+				The ultimate goal here is that no matter how poor of a job you
+				do optimizing your code, the compiler will always find the most
+				efficient solution. The compiler does not respect your right to
+				assign variables. The compiler instead keeps track of the
+				ultimate result that your program should generate, and does
+				only what is absolutely necessary to get that result. This goes
+				down even to the machine level where specific CPU instructions
+				are omitted from the program.
+			</p>
+			<p>
+				I still need to figure out how loops and linking to C code
+				would work here. It doesn't seem like a while loop should be
+				possible in a declarative language, unless we have mutable
+				variables which is completely incompatible with HOLD ON NOW!!
+			</p>
+			<p>
+				Rust has both mutable and immutable variables. The compiler
+				recommends you use immutable variables whenever possible. So,
+				what we need to do in the end is make a distinction between
+				mutable and immutable variables. We can converts mutables to
+				immutables with optimization if necessary. Mutable variables
+				will be actually respected by the compiler as the thing which
+				the programmer told it to be. Immutable variables only serve as
+				placeholders for much more complicated logic. In the end, the
+				variable will removed and the compiler will determine itself
+				which return values need to be stored in memory and which can
+				be discarded (actually, now that I think about, I think pretty
+				much everything would be stored in memory at some point).
+			</p>
+			<p>
+				The compiler also doesn't respect the functions which the user
+				defines. The compiler doesn't really trust the programmer to do
+				anything correctly, so it mostly just does it by itself. Which
+				I imagine would mean it takes a long time to compile, but it
+				will be worth it once you've spent 10 seconds writing a
+				fibonacci function and the compiler spits out a function that
+				generates 1,000,000 numbers in that time (I don't know exactly
+				how many, I'd need to do the math for that one).
+			</p>
+			<p>
+				Anyway, back to functions. The compiler has the difficult task
+				of determining where functions should go. Functions are used to
+				save executable size and memory, but are slightly slower than
+				having all of the logic inline (using inline probably saves
+				about 7 nanoseconds, which makes me question why I bother with
+				such drastic optimization). There is a balance between time,
+				memory, energy, and size here. Good news! I have a solution.
+				You tell the compiler how long you need it to take, how much
+				memory, electricity, and storage the thing should use, and it
+				will try to find solutions which meet those requirements.
+			</p>
+			<p>
+				Hoowee! I'm probably making some questionable decisions here,
+				but most programming languages do that. If anyone here has
+				suggestions on how to make it better, feel free to ask me
+			</p>
+			<p>
+				Should I use LLVM or assembly? LLVM is probably more heavily
+				optimized, but with Assembly I have finer control over how the
+				program is run. I can also know with confidence exactly how
+				each instruction will affect the result. I honestly don't know
+				at this point.
+			</p>
+		</section>
+	</main>
+	<script src="https://botahamec.github.io/load_header.js"></script>
+</body>
+
+</html>
